@@ -2,7 +2,7 @@
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen pt-32 pb-24 px-6 flex flex-col items-center justify-center overflow-hidden">
+    <section className="bg-gray-700 relative w-full min-h-screen pt-32 pb-24 px-6 flex flex-col items-center justify-center overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1440px] h-full opacity-10 pointer-events-none">
         <div className="absolute top-[10%] left-[10%] w-[30%] aspect-square bg-white rounded-full blur-[120px]" />
@@ -37,7 +37,6 @@ export default function Hero() {
       </div>
 
       {/* Grid Pattern Bottom Decor */}
-      <div className="absolute bottom-0 left-0 w-full h-[128px] bg-gradient-to-t from-[#00FF00]/10 to-transparent border-t border-[#00FF00]/20" />
     </section>
   );
 }

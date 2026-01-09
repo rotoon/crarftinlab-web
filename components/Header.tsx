@@ -1,26 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 50);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 pointer-events-none ${
         isScrolled
           ? "h-[60px] bg-black/90 backdrop-blur-sm"
-          : "h-[100px] bg-transparent"
+          : "h-[100px] bg-black"
       }`}
     >
       <div className="w-full max-w-[1440px] mx-auto h-full px-6 flex items-center justify-between">
@@ -29,7 +29,7 @@ export default function Header() {
           {isScrolled ? (
             <a
               href="#"
-              className="hover:scale-120 transition-transform cursor-pointer text-[#00FF00]"
+              className="hover:scale-120 transition-transform cursor-pointer text-white"
             >
               <i className="hn hn-home text-2xl" />
             </a>
