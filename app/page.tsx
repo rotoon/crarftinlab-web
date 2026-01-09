@@ -1,8 +1,8 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Portfolio from "@/components/Portfolio";
 import RacingAnimation from "@/components/RacingAnimation";
+import ServiceTabs from "@/components/ServiceTabs";
 // import ScrollTabs from "@/components/ScrollTabs";
 
 export default function Home() {
@@ -11,11 +11,8 @@ export default function Home() {
       <main className="relative w-full max-w-[1440px] mx-auto min-h-screen">
         <Header />
         <Hero />
-        {/* <ScrollImageCompare /> */}
-        {/* <Services /> */}
-        {/* <ScrollTabs /> */}
         <RacingAnimation directtion="down" />
-        <Portfolio />
+        <ServiceTabs />
         <RacingAnimation directtion="up" />
 
         <Footer />
