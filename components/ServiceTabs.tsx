@@ -96,7 +96,10 @@ export default function ServiceTabs() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-black py-20 min-h-screen flex flex-col justify-center overflow-hidden">
+    <section
+      className="bg-black min-h-screen flex flex-col justify-start overflow-hidden py-10"
+      id="portfolio"
+    >
       <div className="max-w-[1440px] mx-auto w-full px-4 flex flex-col font-mono gap-0">
         {items.map((item, index) => (
           <div key={index} className="flex flex-col md:mt-10 mt-5">
