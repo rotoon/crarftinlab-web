@@ -1,42 +1,27 @@
+@import "tailwindcss";
+@import "@hackernoon/pixel-icon-library/fonts/iconfont.css";
+
+@theme {
+  /* --- Colors from Crafting Lab Figma --- */
+  --color-neon-green: #00FF00;
+  --color-neon-pink: #FF00FF;
+  --color-dark-surface: #0E0E10;
+  --color-dark-black: #000000;
+
+  /* --- Typography --- */
+  --font-kanit: "Kanit", sans-serif;
+  --font-pixel: "Press Start 2P", cursive;
+  --font-inter: "Inter", sans-serif;
+}
+
+/* --- Global Base Styles --- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-dark-black);
+  --foreground: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* --- Utilities --- */
+.pixel-antialiased {
+  image-rendering: pixelated;
 }
