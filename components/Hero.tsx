@@ -19,6 +19,7 @@ function Header() {
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
+        className="text-[56px] text-center mt-30 mb-8 text-black font-medium"
       >
         อัปเกรดธุรกิจของคุณด้วย
         <br />
@@ -29,7 +30,7 @@ function Header() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 1 }}
-        className="max-w-2xl mx-auto text-center text-black"
+        className=" text-[24px] text-center text-black font-normal"
       >
         `เราช่วยพัฒนาธุรกิจและองค์กร ด้วยเทคโนโลยี`
         <br />

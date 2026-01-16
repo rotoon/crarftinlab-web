@@ -206,6 +206,7 @@ export default function Footer() {
             fill="white"
           />
           <text
+            className=" text-[16px] font-normal"
             x="400"
             y="120"
             fill="white"
@@ -217,28 +218,34 @@ export default function Footer() {
         </svg>
       </div>
       <div className="w-full mx-auto flex justify-center space-x-6 text-black items-end h-full pb-6 uppercase text-xs">
-        <Link href="/about" className="hover:underline">
+        <Link href="/about" className="hover:underline text-[16px] font-normal">
           เกี่ยวกับ
         </Link>
-        <Link href="/portfolio" className="hover:underline">
+        <Link
+          href="/portfolio"
+          className="hover:underline text-[16px] font-normal"
+        >
           ผลงาน
         </Link>
-        <Link href="/contact" className="hover:underline">
+        <Link
+          href="/contact"
+          className="hover:underline text-[16px] font-normal"
+        >
           ติดต่อ
         </Link>
         <Link
-          href="https://facebook.com/YourPage"
+          href="https://www.facebook.com/CraftingLab.cnx"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline"
+          className="hover:underline text-[16px] font-normal"
         >
           FACEBOOK
         </Link>
         <Link
-          href="https://instagram.com/YourProfile"
+          href="https://www.instagram.com/craftinglab.cnx/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline"
+          className="hover:underline text-[16px] font-normal"
         >
           INSTAGRAM
         </Link>
