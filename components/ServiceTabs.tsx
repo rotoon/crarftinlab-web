@@ -88,7 +88,7 @@ const items: TabItem[] = [
       'https://picsum.photos/id/50/400/300',
       'https://picsum.photos/id/51/400/300',
       'https://picsum.photos/id/52/400/300',
-      'https://picsum.photos/id/53/400/300',
+      // 'https://picsum.photos/id/53/400/300',
     ],
   },
 ]
