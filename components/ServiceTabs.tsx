@@ -88,7 +88,7 @@ const items: TabItem[] = [
       'https://picsum.photos/id/50/400/300',
       'https://picsum.photos/id/51/400/300',
       'https://picsum.photos/id/52/400/300',
-      // 'https://picsum.photos/id/53/400/300',
+      'https://picsum.photos/id/53/400/300',
     ],
   },
 ]
@@ -107,13 +107,18 @@ export default function ServiceTabs() {
           alt='Crafting Lab Header'
           width={1920}
           height={600}
-          className='w-full h-73 object-cover '
+          className='w-full h-73 object-cover -mt-4'
         />
-        <div className='text-[#FF00AA] text-[56px] ml-[100] font-medium py-10'>
+        <motion.div
+          initial={{ opacity: 0, x: -120 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className='text-[#FF00AA] text-[56px] ml-[100] font-medium py-10'
+        >
           PORTFOLIO
-        </div>
+        </motion.div>
         <Image
-          src='/image-1768540459511.png'
+          src='/Untitled.png'
           alt='Crafting Lab Header'
           width={1920}
           height={100}
