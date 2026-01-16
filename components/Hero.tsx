@@ -19,7 +19,6 @@ function Header() {
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="text-[56px] text-center mt-30  mb-8 text-black font-normal"
       >
         อัปเกรดธุรกิจของคุณด้วย
         <br />
