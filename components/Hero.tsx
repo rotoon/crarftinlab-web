@@ -1,57 +1,57 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
+import React from "react";
+import { motion } from "framer-motion";
 
-export default function Hero() {
+function Header() {
   return (
-    <section className="bg-white relative w-full  flex flex-col items-center justify-center overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, staggerChildren: 0.2 }}
-        className="relative flex flex-col items-center min-h-screen"
-      >
-        <Image
-          src="/images/hero.png"
-          alt="Hero"
-          width={1440}
-          height={1080}
-          objectFit="contain"
-        />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, staggerChildren: 0.2 }}
-        className="relative z-10 max-w-4xl w-full flex flex-col items-center text-center gap-10 py-24 px-6"
-      >
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-kanit text-4xl md:text-6xl  leading-tight text-black font-medium"
-        >
-          อัปเกรดธุรกิจของคุณด้วย
-          <br />
-          <span className="text-black">การเปลี่ยนแปลงทางดิจิทัล</span>
-        </motion.h1>
+    <div className="bg-white">
+      <Image
+        src="/branding web.png"
+        alt="Crafting Lab Header"
+        width={1920}
+        height={600}
+        className="w-full h-auto object-cover "
+      />
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-kanit text-lg md:text-xl text-black/80 max-w-3xl leading-relaxed"
-        >
-          "เราช่วยพัฒนาธุรกิจและองค์กร ด้วยเทคโนโลยี"
-          สร้างระบบการจัดการที่มีประสิทธิภาพตอบสนอง
-          ต่อความต้องการของลูกค้าทุกรูปแบบ
-          พร้อมทั้งออกแบบเครื่องมือแก้ปัญหาทางการตลาด ด้วยการสร้างสรรค์คอนเทนต์
-          บนช่องทางที่หลากหลาย ตอบทุกโจทย์กลุ่มเป้าหมาย
-          ขับเคลื่อนให้ธุรกิจและองค์กรของคุณ
-          เติบโตบนโลกดิจิทัลได้อย่างไร้ขีดจำกัด
-        </motion.p>
-      </motion.div>
-    </section>
+      <motion.h1
+        initial={{ y: -100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="text-[56px] text-center mt-30  mb-8 text-black font-normal"
+      >
+        อัปเกรดธุรกิจของคุณด้วย
+        <br />
+        การเปลี่ยนแปลงทางดิจิทัล
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 1 }}
+        className="max-w-2xl mx-auto text-center text-black"
+      >
+        `เราช่วยพัฒนาธุรกิจและองค์กร ด้วยเทคโนโลยี`
+        <br />
+        สร้างระบบการจัดการที่มีประสิทธิภาพตอบสนอง
+        ต่อความต้องการของลูกค้าทุกรูปแบบ
+        <br /> พร้อมทั้งออกแบบเครื่องมือแก้ปัญหาทางการตลาด
+        ด้วยการสร้างสรรค์คอนเทนต์
+        <br />
+        บนช่องทางที่หลากหลาย ตอบทุกโจทย์กลุ่มเป้าหมาย
+        ขับเคลื่อนให้ธุรกิจและองค์กรของคุณ <br />
+        เติบโตบนโลกดิจิทัลได้อย่างไร้ขีดจำกัด
+      </motion.p>
+      <Image
+        src="/Untitled-1.png"
+        alt="Crafting Lab Header"
+        width={1440}
+        height={128}
+        className="w-full h-auto object-cover mt-30 "
+      />
+    </div>
   );
 }
+
+export default Header;

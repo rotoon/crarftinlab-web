@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
 
 interface TabItem {
   title: string;
@@ -100,6 +101,25 @@ export default function ServiceTabs() {
       className="bg-black min-h-screen flex flex-col justify-start overflow-hidden py-10"
       id="portfolio"
     >
+      <div className="bg-white">
+        <Image
+          src="/image-1768542627143.png"
+          alt="Crafting Lab Header"
+          width={1920}
+          height={600}
+          className="w-full h-73 object-cover "
+        />
+        <div className="text-[#FF00AA] text-[56px] ml-[100] font-medium py-10">
+          portfolio
+        </div>
+        <Image
+          src="/image-1768540459511.png"
+          alt="Crafting Lab Header"
+          width={1920}
+          height={100}
+          className="w-full h-20 object-cover"
+        />
+      </div>
       <div className="max-w-[1440px] mx-auto w-full px-4 flex flex-col font-mono gap-0">
         {items.map((item, index) => (
           <div key={index} className="flex flex-col md:mt-10 mt-5">
@@ -124,7 +144,7 @@ export default function ServiceTabs() {
                     <p className="text-xl leading-relaxed mb-8">
                       {item.content}
                     </p>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-2 gap-4">
                       {item.images.map((img, i) => (
                         <motion.div
                           key={i}
@@ -238,9 +258,10 @@ function PixelTabRow({
           }}
         >
           <span
-            className="font-bold text-lg tracking-wider whitespace-nowrap mx-2 my-2.5 px-2"
+            className={`font-bold text-lg tracking-wider whitespace-nowrap mx-2 my-2.5 px-2 hover:text-[#FF00AA] ${
+              isActive ? "#FF00AA" : "text-white bg-black"
+            }`}
             style={{
-              color: isActive ? "#FF00AA" : item.color,
               borderRadius: "5px",
             }}
           >

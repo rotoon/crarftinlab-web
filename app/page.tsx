@@ -11,9 +11,9 @@ export default function Home() {
       <main className="relative w-full max-w-[1440px] mx-auto min-h-screen">
         <Header />
         <Hero />
-        <RacingAnimation directtion="down" />
+        {/* <RacingAnimation directtion="down" /> */}
         <ServiceTabs />
-        <RacingAnimation directtion="up" />
+        {/* <RacingAnimation directtion="up" /> */}
 
         <Footer />
       </main>
