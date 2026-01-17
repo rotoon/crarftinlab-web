@@ -270,11 +270,8 @@ function PixelTabRow({
         >
           <span
             className={`font-bold text-lg tracking-wider whitespace-nowrap mx-2 my-2.5 px-2 hover:text-[#FF00AA] ${
-              isActive ? '#FF00AA' : 'text-white bg-black'
+              isActive ? 'text-[#FF00AA]' : 'text-white'
             }`}
-            style={{
-              borderRadius: '5px',
-            }}
           >
             {item.title}
           </span>
