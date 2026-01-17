@@ -98,10 +98,10 @@ export default function ServiceTabs() {
 
   return (
     <section
-      className='bg-black min-h-screen flex flex-col justify-start overflow-hidden py-10'
+      className='bg-black min-h-screen flex flex-col justify-start py-10'
       id='portfolio'
     >
-      <div className='bg-white'>
+      <div className='bg-white overflow-hidden'>
         <Image
           src='/image-1768542627143.png'
           alt='Crafting Lab Header'
@@ -125,22 +125,30 @@ export default function ServiceTabs() {
           className='w-full h-20 object-cover'
         />
       </div>
-      <div className='max-w-[1440px] mx-auto w-full px-4 flex flex-col font-mono gap-0'>
+      {/* Relative container สำหรับ sticky */}
+      <div className='relative min-h-screen max-w-[1440px] mx-auto w-full px-4 flex flex-col font-mono gap-0'>
         {items.map((item, index) => (
           <div
             key={index}
-            className='flex flex-col md:mt-10 mt-5'
+            className='flex flex-col'
           >
-            <PixelTabRow
-              item={item}
-              index={index}
-              isActive={activeIndex === index}
-              onClick={() =>
-                setActiveIndex(index === activeIndex ? null : index)
-              }
-            />
+            {/* Sticky Header - ติดด้านบนเมื่อ scroll */}
+            <div
+              className={`sticky top-11 z-50 bg-black pt-4 pb-2 md:mt-10 mt-5`}
+            >
+              <PixelTabRow
+                item={item}
+                index={index}
+                isActive={true}
+                onClick={() =>
+                  setActiveIndex(index === activeIndex ? null : index)
+                }
+              />
+            </div>
+
+            {/* Content */}
             <AnimatePresence>
-              {activeIndex === index && (
+              {true && (
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
@@ -270,7 +278,7 @@ function PixelTabRow({
         >
           <span
             className={`font-bold text-lg tracking-wider whitespace-nowrap mx-2 my-2.5 px-2 hover:text-[#FF00AA] ${
-              isActive ? 'text-[#FF00AA]' : 'text-white'
+              isActive ? 'text-[#FF00AA]' : 'text-white bg-black'
             }`}
           >
             {item.title}
