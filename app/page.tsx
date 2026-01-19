@@ -3,6 +3,7 @@ import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import { RacingTrack1, RacingTrack2 } from '@/components/RacingAnimation'
 import ServiceTabs from '@/components/ServiceTabs'
+import ZigzagTimeline from '@/components/ZigzagTimeline'
 // import ScrollTabs from "@/components/ScrollTabs";
 
 export default function Home() {
@@ -12,8 +13,9 @@ export default function Home() {
         <Header />
         <Hero />
         <RacingTrack1 />
-        <ServiceTabs />
+        <ZigzagTimeline />
         <RacingTrack2 />
+        <ServiceTabs />
 
         <Footer />
       </main>
