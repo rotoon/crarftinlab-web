@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 export default function Footer() {
   return (
@@ -216,7 +217,7 @@ export default function Footer() {
           </text>
         </svg>
       </div>
-      <div className="w-full mx-auto flex justify-center space-x-6 text-black items-end h-full pb-6 uppercase text-xs">
+      <div className="w-full mx-auto flex justify-center space-x-6 text-black items-end h-full pb-6 uppercase">
         <Link href="/about" className="hover:underline">
           เกี่ยวกับ
         </Link>
