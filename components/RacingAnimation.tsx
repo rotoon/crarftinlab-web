@@ -9,7 +9,7 @@ export function RacingTrack1() {
     offset: ["start start", "end end"],
   });
 
-  const offsetDistance = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
+  const offsetDistance = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const animationPath = "path('M 360 130 C 360 400 400 450 0 650')"; // Top Center to Bottom Left
 
   return (
@@ -59,7 +59,7 @@ export function RacingTrack2() {
     offset: ["start start", "end end"],
   });
 
-  const offsetDistance = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
+  const offsetDistance = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const animationPath = "path('M 500 750 C 500 700 450 400 850 380')";
 
   return (
