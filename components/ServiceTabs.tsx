@@ -20,8 +20,8 @@ const items: TabItem[] = [
     content:
       "Strategic planning and expert consultation to guide your digital journey. We analyze your market position and chart the most effective course for growth.",
     images: [
-      "https://picsum.photos/id/1/400/300",
-      "https://picsum.photos/id/2/400/300",
+      "/images/f1-car.png",
+      "/branding web.png",
       "https://picsum.photos/id/3/400/300",
       "https://picsum.photos/id/4/400/300",
       "https://picsum.photos/id/4/400/300",
@@ -140,7 +140,7 @@ export default function ServiceTabs() {
               <PixelTabRow
                 item={item}
                 index={index}
-                isActive={true}
+                isActive={index === activeIndex}
                 onClick={() =>
                   setActiveIndex(index === activeIndex ? null : index)
                 }
@@ -149,7 +149,7 @@ export default function ServiceTabs() {
 
             {/* Content */}
             <AnimatePresence>
-              {true && (
+              {index === activeIndex && (
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
@@ -185,7 +185,7 @@ export default function ServiceTabs() {
                           <img
                             src={img}
                             alt={`Work ${i + 1}`}
-                            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                            className="w-full h-full object-cover transition-all duration-300"
                           />
                         </motion.div>
                       ))}
