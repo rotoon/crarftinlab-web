@@ -246,7 +246,8 @@ export default function Footer() {
           href="https://www.instagram.com/craftinglab.cnx/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-[16px] font-normal"
+          className="hover:underline text-[16px] font-normal "
+          id="contact"
         >
           INSTAGRAM
         </Link>

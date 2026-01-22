@@ -6,7 +6,7 @@ const reviews = [
     name: "Jack",
     username: "@jack",
     body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    img: "https://scontent.fcnx4-1.fna.fbcdn.net/v/t39.30808-6/435734959_7326931027354118_2062931287632771207_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=P75Tkw57GnkQ7kNvwEvyAMI&_nc_oc=AdnP-kPvgkW57UeLFsbW_GrjjZrObVFMhWboNSYauqZSXSTNSMzftrO1EdrzcFpdb1TTmFc2id_3leCQ0DXCRi6o&_nc_zt=23&_nc_ht=scontent.fcnx4-1.fna&_nc_gid=8omP5iUmhX3tGNN44zlKtQ&oh=00_AfqLdClZv3zNT_pznSKVTOhg2K5CQNgJPyI-po48jApd1A&oe=6977C3A9",
   },
   {
     name: "Jill",
@@ -65,7 +65,13 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2 ">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img
+          className="rounded-full"
+          width="150"
+          height="150"
+          alt=""
+          src={img}
+        />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
