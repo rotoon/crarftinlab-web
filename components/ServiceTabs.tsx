@@ -10,6 +10,7 @@ interface TabItem {
   indent: number; // Percentage
   content: string;
   images: string[];
+  isVideo?: boolean;
 }
 
 const items: TabItem[] = [
@@ -63,11 +64,12 @@ const items: TabItem[] = [
     content:
       "Comprehensive social media strategies to engage your audience. We manage content creation, community interaction, and performance analytics.",
     images: [
-      "https://picsum.photos/id/30/400/300",
-      "https://picsum.photos/id/31/400/300",
-      "https://picsum.photos/id/32/400/300",
-      "https://picsum.photos/id/33/400/300",
+      "/videos/Sequence 02.mp4",
+      "/videos/สัมภาษณ์แก้ไข.mp4",
+      "/videos/Sequence 02.mp4",
+      "/videos/สัมภาษณ์แก้ไข.mp4",
     ],
+    isVideo: true,
   },
   {
     title: "OFFLINE MEDIA",
@@ -161,7 +163,9 @@ export default function ServiceTabs() {
                     <p className="text-xl leading-relaxed mb-8">
                       {item.content}
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div
+                      className={`grid grid-cols-${item.isVideo ? "3" : "2"} gap-4`}
+                    >
                       {item.images.map((img, i) => (
                         <motion.div
                           key={i}
@@ -180,13 +184,25 @@ export default function ServiceTabs() {
                             delay: i * 0.1,
                             ease: "circOut",
                           }}
-                          className="relative aspect-video bg-gray-800 overflow-hidden border-2 border-white/20 hover:border-white/50 transition-colors cursor-pointer group"
+                          className={`relative ${item?.isVideo ? "aspect-auto" : "aspect-video"} bg-gray-800 overflow-hidden border-2 border-white/20 hover:border-white/50 transition-colors cursor-pointer group`}
                         >
-                          <img
-                            src={img}
-                            alt={`Work ${i + 1}`}
-                            className="w-full h-full object-cover transition-all duration-300"
-                          />
+                          {item.isVideo ? (
+                            <video
+                              className="h-full object-contain transition-all duration-300"
+                              controls
+                              autoPlay
+                              loop
+                              muted
+                            >
+                              <source src={img} type="video/mp4" />
+                            </video>
+                          ) : (
+                            <img
+                              src={img}
+                              alt={`Work ${i + 1}`}
+                              className="w-full h-full object-cover transition-all duration-300"
+                            />
+                          )}
                         </motion.div>
                       ))}
                     </div>
