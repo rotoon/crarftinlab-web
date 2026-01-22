@@ -50,7 +50,10 @@ const timelineItems: TimelineItem[] = [
 
 export default function ZigzagTimeline() {
   return (
-    <section className="bg-black min-h-screen py-20 font-mono -mt-100 -mb-100">
+    <section
+      className="bg-black min-h-screen py-20 font-mono -mt-100 -mb-100"
+      id="about"
+    >
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="relative">
           {timelineItems.map((item, index) => {

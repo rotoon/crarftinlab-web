@@ -7,18 +7,10 @@ import { motion } from "framer-motion";
 function Header() {
   return (
     <div className="bg-white">
-      <Image
-        src="/branding web.png"
-        alt="Crafting Lab Header"
-        width={1920}
-        height={600}
-        className="w-full h-auto object-cover "
-      />
-
       <div>
         {/* ไม่ต้อง import แต่ระบุ path โดยเริ่มจาก / (root) ได้เลย */}
-        <video width="600" controls>
-          <source src="/videos/my-movie.mp4" type="video/mp4" />
+        <video autoPlay muted className="w-full h-auto object-cover ">
+          <source src="/videos/Comp_1.mp4" type="video/mp4" />
         </video>
       </div>
 
