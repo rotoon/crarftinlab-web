@@ -55,7 +55,7 @@ export default function Header() {
   // Smooth scroll handler
   const handleScrollTo = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    id: string
+    id: string,
   ) => {
     e.preventDefault();
     const element = document.getElementById(id);
@@ -245,7 +245,7 @@ export default function Header() {
                 onClick={(e) =>
                   handleScrollTo(
                     e as unknown as React.MouseEvent<HTMLAnchorElement>,
-                    "about"
+                    "about",
                   )
                 }
                 className="hover:text-[#00FF00] transition-colors"
@@ -258,7 +258,7 @@ export default function Header() {
                 onClick={(e) =>
                   handleScrollTo(
                     e as unknown as React.MouseEvent<HTMLAnchorElement>,
-                    "portfolio"
+                    "portfolio",
                   )
                 }
                 className="hover:text-[#00FF00] transition-colors"
@@ -271,7 +271,7 @@ export default function Header() {
                 onClick={(e) =>
                   handleScrollTo(
                     e as unknown as React.MouseEvent<HTMLAnchorElement>,
-                    "contact"
+                    "contact",
                   )
                 }
                 className="hover:text-[#00FF00] transition-colors"

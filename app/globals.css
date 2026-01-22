@@ -1,11 +1,14 @@
 @import "tailwindcss";
 @import "@hackernoon/pixel-icon-library/fonts/iconfont.css";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 @theme {
   /* --- Colors from Crafting Lab Figma --- */
-  --color-neon-green: #00FF00;
-  --color-neon-pink: #FF00FF;
-  --color-dark-surface: #0E0E10;
+  --color-neon-green: #00ff00;
+  --color-neon-pink: #ff00ff;
+  --color-dark-surface: #0e0e10;
   --color-dark-black: #000000;
 
   /* --- Typography --- */
@@ -15,14 +18,30 @@
 }
 
 /* --- Global Base Styles --- */
-:root {
-  --background: var(--color-dark-black);
-  --foreground: #ffffff;
-}
-
 
 /* --- Utilities --- */
 .pixel-antialiased {
   image-rendering: pixelated;
 }
 
+@theme inline {
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}

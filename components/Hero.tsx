@@ -15,6 +15,13 @@ function Header() {
         className="w-full h-auto object-cover "
       />
 
+      <div>
+        {/* ไม่ต้อง import แต่ระบุ path โดยเริ่มจาก / (root) ได้เลย */}
+        <video width="600" controls>
+          <source src="/videos/my-movie.mp4" type="video/mp4" />
+        </video>
+      </div>
+
       <motion.h1
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -25,7 +32,6 @@ function Header() {
         <br />
         การเปลี่ยนแปลงทางดิจิทัล
       </motion.h1>
-
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

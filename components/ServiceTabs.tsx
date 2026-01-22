@@ -119,9 +119,16 @@ export default function ServiceTabs() {
           initial={{ opacity: 0, x: -120 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-[#FF00AA] text-[56px] ml-[100] font-medium py-10 "
+          className="text-[#FF00AA] text-[56px] ml-[100] font-medium py-10 flex flex-row items-end"
         >
           PORTFOLIO
+          <Image
+            src="/icons/line1.png"
+            alt="Crafting Lab Header"
+            width={1920}
+            height={600}
+            className="w-4xl h-1 object-cover ml-6 mb-4"
+          />
         </motion.div>
         <Image
           src="/Untitled.png"
@@ -164,7 +171,7 @@ export default function ServiceTabs() {
                       {item.content}
                     </p>
                     <div
-                      className={`grid grid-cols-${item.isVideo ? "3" : "2"} gap-4`}
+                      className={`grid grid-cols-3 ${item.isVideo ? "3" : "2"} gap-4`}
                     >
                       {item.images.map((img, i) => (
                         <motion.div
@@ -212,6 +219,33 @@ export default function ServiceTabs() {
             </AnimatePresence>
           </div>
         ))}
+      </div>
+      <Image
+        src="/icons/line2.png"
+        alt="Crafting Lab Header"
+        width={1920}
+        height={600}
+        className="w-full h-1 object-cover mt-50"
+      />
+
+      <div className="text-[#FF00AA] text-[56px] gap-4 flex justify-end font-medium mt-35 px-20">
+        <div className="flex flex-col items-end justify-end">
+          Out Clients
+          <Image
+            src="/icons/line1.png"
+            alt="Crafting Lab Header"
+            width={1920}
+            height={600}
+            className="object-cover"
+          />
+        </div>
+        <Image
+          src="/icons/icon1.png"
+          alt="Crafting Lab Header"
+          width={100}
+          height={100}
+          className="w-150 object-cover "
+        />
       </div>
     </section>
   );
