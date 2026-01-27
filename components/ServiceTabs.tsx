@@ -29,6 +29,7 @@ const items: TabItem[] = [
       "gogreen/CL2026_WebDesign-06.jpg",
     ],
   },
+
   {
     title: "BRANDING & DESIGN",
     color: "#00FF00",
@@ -44,6 +45,7 @@ const items: TabItem[] = [
       "https://picsum.photos/id/13/400/300",
     ],
   },
+
   {
     title: "LOGO DESIGN",
     color: "#00FF00",
@@ -109,36 +111,8 @@ export default function ServiceTabs() {
       className="bg-black min-h-screen flex flex-col justify-start"
       id="portfolio"
     >
-      <div className="bg-white overflow-hidden">
-        <Image
-          src="/image-1768542627143.png"
-          alt="Crafting Lab Header"
-          width={1920}
-          height={600}
-          className="w-full h-73 object-cover -mt-4"
-        />
-        <motion.div
-          initial={{ opacity: 0, x: -120 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-[#FF00AA] text-[56px] ml-[100] font-medium py-10 flex flex-row items-end"
-        >
-          PORTFOLIO
-          <Image
-            src="/icons/line1.png"
-            alt="Crafting Lab Header"
-            width={1920}
-            height={600}
-            className="w-4xl h-1 object-cover ml-6 mb-4"
-          />
-        </motion.div>
-        <Image
-          src="/Untitled.png"
-          alt="Crafting Lab Header"
-          width={1920}
-          height={100}
-          className="w-full h-20 object-cover"
-        />
+      <div className="text-[#03FF00] text-[55px]  font-medium py-20 flex flex-row items-center justify-center ">
+        PortFoilo
       </div>
       {/* Relative container สำหรับ sticky */}
       <div className="relative min-h-screen max-w-[1440px] mx-auto w-full px-4 flex flex-col font-mono gap-0">

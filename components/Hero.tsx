@@ -42,11 +42,11 @@ function Header() {
         เติบโตบนโลกดิจิทัลได้อย่างไร้ขีดจำกัด
       </motion.p>
       <Image
-        src="/Untitled-1.png"
+        src="/images/รถ55.png"
         alt="Crafting Lab Header"
-        width={1440}
+        width={1920}
         height={128}
-        className="w-full h-auto object-cover mt-30 "
+        className="w-full h-auto object-cover mt-30 bg-black"
       />
     </div>
   );

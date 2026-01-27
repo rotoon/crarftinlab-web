@@ -96,9 +96,9 @@ export default function Header() {
             </a>
           ) : (
             <Image
-              src="/logo.svg"
+              src="/LOGO_CRAFTING LAB.png"
               alt="Crafting Lab Logo"
-              width={95}
+              width={200}
               height={10}
               className="scale-250 origin-left"
               priority
