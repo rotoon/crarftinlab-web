@@ -14,12 +14,11 @@ export default function Home() {
       <main className="relative w-full max-w-[1440px] mx-auto min-h-screen">
         <Header />
         <Hero />
-        <RacingTrack1 />
-        <ZigzagTimeline />
-        <RacingTrack2 />
+        {/* <RacingTrack1 /> */}
+        {/* <ZigzagTimeline /> */}
+        {/* <RacingTrack2 /> */}
         <ServiceTabs />
         <MarqueeDemo />
-
         <Footer />
       </main>
     </div>

@@ -100,7 +100,7 @@ export default function Header() {
               alt="Crafting Lab Logo"
               width={200}
               height={10}
-              className="scale-250 origin-left"
+              className="scale-250 origin-left "
               priority
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: "smooth" });

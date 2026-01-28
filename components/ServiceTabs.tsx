@@ -3,6 +3,10 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
+import Lightbox from "yet-another-react-lightbox-lite";
+import "yet-another-react-lightbox-lite/styles.css";
+import slides from "./Slide";
 
 interface TabItem {
   title: string;
@@ -105,15 +109,22 @@ const items: TabItem[] = [
 
 export default function ServiceTabs() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const [index, setIndex] = useState<number>();
 
   return (
     <section
       className="bg-black min-h-screen flex flex-col justify-start"
       id="portfolio"
     >
-      <div className="text-[#03FF00] text-[55px]  font-medium py-20 flex flex-row items-center justify-center ">
+      <div className="text-[#03FF00] text-[55px]  font-medium py-40 flex flex-row items-center justify-center ">
         PortFoilo
       </div>
+      <Lightbox
+        slides={slides(items[activeIndex ?? 0].images)}
+        index={index}
+        setIndex={setIndex}
+      />
+
       {/* Relative container สำหรับ sticky */}
       <div className="relative min-h-screen max-w-[1440px] mx-auto w-full px-4 flex flex-col font-mono gap-0">
         {items.map((item, index) => (
@@ -184,6 +195,7 @@ export default function ServiceTabs() {
                               src={img}
                               alt={`Work ${i + 1}`}
                               className="w-full h-full object-cover transition-all duration-300"
+                              onClick={() => setIndex(i)}
                             />
                           )}
                         </motion.div>
@@ -203,7 +215,6 @@ export default function ServiceTabs() {
         height={600}
         className="w-full h-1 object-cover mt-50"
       />
-
       <div className="text-[#FF00AA] text-[56px] gap-4 flex justify-end font-medium mt-35 px-20">
         <div className="flex flex-col items-end justify-end">
           Out Clients
