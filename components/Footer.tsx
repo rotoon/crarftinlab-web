@@ -1,10 +1,10 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className="w-full mt-20 bg-neon-green overflow-hidden grid md:grid-cols-2 h-[254px]">
-      <div className="w-full mx-auto h-full flex items-end">
+    <footer className="w-full mt-20  overflow-hidden h-[254px]">
+      {/* <div className="w-full mx-auto h-full flex items-end">
         <svg
           viewBox="0 0 798 146"
           fill="none"
@@ -217,7 +217,14 @@ export default function Footer() {
             ©2022 Crafting Lab - All Rights Reserved
           </text>
         </svg>
-      </div>
+      </div> */}
+      <Image
+        src="/image-1769745498734.png"
+        alt="Green Pixel Background"
+        width={1920}
+        height={400}
+        className="object-cover w-full h-full "
+      />
       <div className="w-full mx-auto flex justify-center space-x-6 text-black items-end h-full pb-6 uppercase text-xs">
         <Link href="/about" className="hover:underline text-[16px] font-normal">
           เกี่ยวกับ
@@ -238,7 +245,7 @@ export default function Footer() {
           href="https://www.facebook.com/CraftingLab.cnx"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-[16px] font-normal"
+          className="hover:underline text-[16px] font-normal font-inter"
         >
           FACEBOOK
         </Link>
@@ -246,7 +253,7 @@ export default function Footer() {
           href="https://www.instagram.com/craftinglab.cnx/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-[16px] font-normal "
+          className="hover:underline text-[16px] font-normal"
           id="contact"
         >
           INSTAGRAM

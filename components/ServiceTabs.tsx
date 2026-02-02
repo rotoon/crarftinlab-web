@@ -3,10 +3,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link";
 import Lightbox from "yet-another-react-lightbox-lite";
 import "yet-another-react-lightbox-lite/styles.css";
 import slides from "./Slide";
+import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
+import { XIcon } from "lucide-react";
 
 interface TabItem {
   title: string;
@@ -15,6 +16,7 @@ interface TabItem {
   content: string;
   images: string[];
   isVideo?: boolean;
+  isVideoOpen?: boolean;
 }
 
 const items: TabItem[] = [
@@ -72,12 +74,13 @@ const items: TabItem[] = [
     images: [
       "/videos/Sequence 02.mp4",
       "/videos/สัมภาษณ์แก้ไข.mp4",
-      "/videos/Sequence 02.mp4",
-      "/videos/สัมภาษณ์แก้ไข.mp4",
-      "/videos/Sequence 02.mp4",
-      "/videos/Sequence 02.mp4",
+      // "/videos/Sequence 02.mp4",
+      // "/videos/สัมภาษณ์แก้ไข.mp4",
+      // "/videos/Sequence 02.mp4",
+      // "/videos/Sequence 02.mp4",
     ],
     isVideo: true,
+    isVideoOpen: true,
   },
   {
     title: "OFFLINE MEDIA",
@@ -110,20 +113,59 @@ const items: TabItem[] = [
 export default function ServiceTabs() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
   const [index, setIndex] = useState<number>();
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <section
       className="bg-black min-h-screen flex flex-col justify-start"
       id="portfolio"
     >
-      <div className="text-[#03FF00] text-[55px]  font-medium py-40 flex flex-row items-center justify-center ">
+      <div className="text-[#03FF00] text-[55px]  font-medium py-40 flex flex-row items-center justify-center font-inter">
         PortFoilo
       </div>
+      {/* Images Lightbox */}
       <Lightbox
         slides={slides(items[activeIndex ?? 0].images)}
         index={index}
         setIndex={setIndex}
       />
+      {/* Hero Video Dialog Demo */}
+      <AnimatePresence>
+        {isVideoOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Escape" || e.key === "Enter" || e.key === " ") {
+                setIsVideoOpen(false);
+              }
+            }}
+            onClick={() => setIsVideoOpen(false)}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-100 flex items-center justify-center bg-black/80 backdrop-blur-3xl"
+          >
+            <motion.div
+              transition={{ type: "spring", damping: 30, stiffness: 300 }}
+              className="relative mx-4 aspect-auto w-full h-[80%] max-w-4xl md:mx-0"
+            >
+              <motion.button className="absolute -top-16 right-0 rounded-full bg-neutral-900/50 p-2 text-xl text-white ring-1 backdrop-blur-md dark:bg-neutral-100/50 dark:text-black">
+                <XIcon className="size-5" />
+              </motion.button>
+              <div className="relative isolate size-full overflow-hidden rounded-2xl border-2 border-white">
+                <iframe
+                  src={"/videos/Sequence 02.mp4"}
+                  title="Hero Video player"
+                  className="size-full rounded-2xl"
+                  allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Relative container สำหรับ sticky */}
       <div className="relative min-h-screen max-w-[1440px] mx-auto w-full px-4 flex flex-col font-mono gap-0">
@@ -151,7 +193,7 @@ export default function ServiceTabs() {
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="overflow-hidden"
+                  className=""
                 >
                   <div className="py-8 text-white/80 w-full ml-auto mr-auto px-12 border-l-2 border-r-2 border-white/10 my-2">
                     <p className="text-xl leading-relaxed mb-8">
@@ -187,6 +229,7 @@ export default function ServiceTabs() {
                               autoPlay
                               loop
                               muted
+                              onClick={() => setIsVideoOpen(true)}
                             >
                               <source src={img} type="video/mp4" />
                             </video>
@@ -215,23 +258,25 @@ export default function ServiceTabs() {
         height={600}
         className="w-full h-1 object-cover mt-50"
       />
-      <div className="text-[#FF00AA] text-[56px] gap-4 flex justify-end font-medium mt-35 px-20">
-        <div className="flex flex-col items-end justify-end">
-          Out Clients
-          <Image
-            src="/icons/line1.png"
-            alt="Crafting Lab Header"
-            width={1920}
-            height={600}
-            className="object-cover"
-          />
+      <div className="flex flex-row items-center justify-center mt-35">
+        <Image
+          src="/image-outclients-left.png"
+          alt="Crafting Lab Header"
+          width={1920}
+          height={600}
+          className="w-[740px] h-[84px]"
+        />
+        <div className="text-[#03FF00] text-[56px] gap-4 flex justify-center font-medium">
+          <div className="flex flex-col items-center justify-center text-nowrap font-inter">
+            OUR CLIENTS
+          </div>
         </div>
         <Image
-          src="/icons/icon1.png"
+          src="/image-outclients-ligth.png"
           alt="Crafting Lab Header"
-          width={100}
-          height={100}
-          className="w-150 object-cover "
+          width={1920}
+          height={600}
+          className="w-[740px] h-[84px]"
         />
       </div>
     </section>
