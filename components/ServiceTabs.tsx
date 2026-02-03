@@ -237,7 +237,7 @@ export default function ServiceTabs() {
                             <img
                               src={img}
                               alt={`Work ${i + 1}`}
-                              className="w-full h-full object-cover transition-all duration-300"
+                              className="w-full h-full object-cover transition-all duration-300 "
                               onClick={() => setIndex(i)}
                             />
                           )}
@@ -256,15 +256,15 @@ export default function ServiceTabs() {
         alt="Crafting Lab Header"
         width={1920}
         height={600}
-        className="w-full h-1 object-cover mt-50"
+        className="w-full h-1 object-cover mt-50 "
       />
-      <div className="flex flex-row items-center justify-center mt-35">
+      <div className="flex flex-row items-center justify-center mt-35 ">
         <Image
           src="/image-outclients-left.png"
           alt="Crafting Lab Header"
           width={1920}
           height={600}
-          className="w-[740px] h-[84px]"
+          className="w-[740px] h-[84px] "
         />
         <div className="text-[#03FF00] text-[56px] gap-4 flex justify-center font-medium">
           <div className="flex flex-col items-center justify-center text-nowrap font-inter">
