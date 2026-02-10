@@ -22,6 +22,11 @@ function Header() {
         //   backgroundRepeat: "no-repeat",
         // }}
       >
+        <section
+          className="bg-black  flex flex-col justify-start  "
+          id="about"
+        ></section>
+
         <Image
           src="/images/symbol CLweb2.png"
           alt="Crafting Lab Header"
@@ -39,6 +44,7 @@ function Header() {
           <br />
           การเปลี่ยนแปลงทางดิจิทัล
         </motion.h1>
+
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

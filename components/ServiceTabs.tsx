@@ -59,10 +59,12 @@ const items: TabItem[] = [
     content:
       "High-end production services for impactful visual storytelling. Our team handles everything from pre-production planning to post-processing editing.",
     images: [
-      "https://picsum.photos/id/20/400/300",
-      "https://picsum.photos/id/21/400/300",
-      "https://picsum.photos/id/22/400/300",
-      "https://picsum.photos/id/23/400/300",
+      "all logoo/all logo-32.png",
+      "all logoo/all logo-33.png",
+      "all logoo/all logo-35.png",
+      "all logoo/all logo-31.png",
+      "all logoo/all logo-22.png",
+      "all logoo/all logo-01.png",
     ],
   },
   {
@@ -72,9 +74,9 @@ const items: TabItem[] = [
     content:
       "Comprehensive social media strategies to engage your audience. We manage content creation, community interaction, and performance analytics.",
     images: [
-      "/videos/Sequence 02.mp4",
-      "/videos/สัมภาษณ์แก้ไข.mp4",
-      // "/videos/Sequence 02.mp4",
+      "/videos/Craft Heart - Nomberone DRAFT04.mp4",
+      "/videos/Craft Heart - Roti Nana DRAFT02.mp4",
+      "/videos/Craft Heart - Pasta AMA DRAFT04.mp4",
       // "/videos/สัมภาษณ์แก้ไข.mp4",
       // "/videos/Sequence 02.mp4",
       // "/videos/Sequence 02.mp4",
@@ -102,10 +104,12 @@ const items: TabItem[] = [
     content:
       "Data-driven advertising campaigns across multiple platforms. We maximize your ad spend efficiency through continuous monitoring and optimization.",
     images: [
-      "https://picsum.photos/id/50/400/300",
-      "https://picsum.photos/id/51/400/300",
-      "https://picsum.photos/id/52/400/300",
-      "https://picsum.photos/id/53/400/300",
+      "production/DSC09180.png",
+      "production/DSC09193.png",
+      "production/20250627-645A2711.jpg",
+      "production/20250627-645A2599.jpg",
+      "production/20250627-645A2650.jpg",
+      "production/20250627-645A2619.jpg",
     ],
   },
 ];
@@ -266,6 +270,7 @@ export default function ServiceTabs() {
           height={600}
           className="w-[740px] h-[84px] "
         />
+
         <div className="text-[#03FF00] text-[56px] gap-4 flex justify-center font-medium">
           <div className="flex flex-col items-center justify-center text-nowrap font-inter">
             OUR CLIENTS

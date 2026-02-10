@@ -31,6 +31,11 @@ export default function Footer() {
         />
       </div>
 
+      <section
+        className="bg-black  flex flex-col justify-start  "
+        id="contact"
+      ></section>
+
       <div className="flex items-center justify-between px-20 py-10 bg-[#00FF00]">
         <div className="flex justify-start space-x-4 h-full w-full">
           <Image
@@ -53,7 +58,7 @@ export default function Footer() {
 
         <div className="flex flex-col space-y-4 h-30 w-full justify-end">
           <div className="flex space-x-4 text-black w-full justify-end">
-            <Link href={"#"}>
+            <Link href={"https://www.instagram.com/craftinglab.cnx/"}>
               <Image
                 src="/icons/Asset 2@3x.png"
                 alt="Green Pixel Background"
@@ -61,7 +66,7 @@ export default function Footer() {
                 height={50}
               />
             </Link>
-            <Link href={""}>
+            <Link href={"https://www.facebook.com/CraftingLab.cnx"}>
               <Image
                 src="/icons/Asset 3@3x.png"
                 alt="Green Pixel Background"
