@@ -6,7 +6,6 @@ import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox-lite";
 import "yet-another-react-lightbox-lite/styles.css";
 import slides from "./Slide";
-import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
 import { XIcon } from "lucide-react";
 
 interface TabItem {
@@ -25,10 +24,20 @@ const items: TabItem[] = [
     color: "#00FF00",
     indent: 5,
     content:
-      "Strategic planning and expert consultation to guide your digital journey. We analyze your market position and chart the most effective course for growth.",
+      "การวางแผนเชิงกลยุทธ์และการให้คำปรึกษาจากผู้เชี่ยวชาญเพื่อนำทางสู่การเปลี่ยนแปลงทางดิจิทัล เราวิเคราะห์ตำแหน่งทางการตลาดของคุณและกำหนดแนวทางที่ได้ผลที่สุดเพื่อการเติบโต",
+    images: ["/gogreen/CL2026_WebDesign-01.jpg"],
+  },
+
+  {
+    title: "BRANDING & DESIGN",
+    color: "#00FF00",
+    indent: 20,
+    content:
+      "การสร้างเอกลักษณ์ทางภาพที่สื่อสารภาษาของแบรนด์คุณ ตั้งแต่การออกแบบโลโก้ไปจนถึงคู่มือแบรนด์ฉบับสมบูรณ์ เรารับประกันว่าภาพลักษณ์ของคุณจะน่าจดจำและสอดคล้องกัน",
     images: [
-      "/gogreen/CL2026_WebDesign-01.jpg",
-      "/gogreen/CL2026_WebDesign-02.jpg",
+      "/gogreen/CL2026_WebDesign-07.jpg",
+      "/gogreen/CL2026_WebDesign-08.jpg",
+      "/gogreen/CL2026_WebDesign-11.jpg",
       "gogreen/CL2026_WebDesign-03.jpg",
       "gogreen/CL2026_WebDesign-04.jpg",
       "gogreen/CL2026_WebDesign-05.jpg",
@@ -37,27 +46,11 @@ const items: TabItem[] = [
   },
 
   {
-    title: "BRANDING & DESIGN",
-    color: "#00FF00",
-    indent: 20,
-    content:
-      "Visual identity creation that speaks your brand's language. From logo design to full brand guidelines, we ensure your image is memorable and consistent.",
-    images: [
-      "/gogreen/CL2026_WebDesign-07.jpg",
-      "/gogreen/CL2026_WebDesign-08.jpg",
-      "/gogreen/CL2026_WebDesign-09.jpg",
-      "/gogreen/CL2026_WebDesign-10.jpg",
-      "/gogreen/CL2026_WebDesign-11.jpg",
-      "https://picsum.photos/id/13/400/300",
-    ],
-  },
-
-  {
     title: "LOGO DESIGN",
     color: "#00FF00",
     indent: 35,
     content:
-      "High-end production services for impactful visual storytelling. Our team handles everything from pre-production planning to post-processing editing.",
+      "บริการผลิตงานคุณภาพสูงเพื่อการเล่าเรื่องด้วยภาพที่ทรงพลัง ทีมงานของเราดูแลทุกอย่างตั้งแต่การวางแผนก่อนการผลิตไปจนถึงการตัดต่อหลังการผลิต",
     images: [
       "all logoo/all logo-32.png",
       "all logoo/all logo-33.png",
@@ -72,7 +65,8 @@ const items: TabItem[] = [
     color: "#00FF00",
     indent: 50,
     content:
-      "Comprehensive social media strategies to engage your audience. We manage content creation, community interaction, and performance analytics.",
+      "กลยุทธ์โซเชียลมีเดียแบบครบวงจรเพื่อดึงดูดกลุ่มเป้าหมายของคุณเราจัดการการสร้างคอนเทนต์การมีปฏิสัมพันธ์กับชุมชนและการวิเคราะห์ประสิทธิภาพ",
+
     images: [
       "/videos/Craft Heart - Nomberone DRAFT04.mp4",
       "/videos/Craft Heart - Roti Nana DRAFT02.mp4",
@@ -91,10 +85,9 @@ const items: TabItem[] = [
     content:
       "Detailed performance analysis and actionable insights. We provide transparent reporting on all campaigns to track ROI and optimize future strategies.",
     images: [
-      "https://picsum.photos/id/40/400/300",
-      "https://picsum.photos/id/41/400/300",
-      "https://picsum.photos/id/42/400/300",
-      "https://picsum.photos/id/43/400/300",
+      "/gogreen/CL2026_WebDesign-09.jpg",
+      "/gogreen/CL2026_WebDesign-10.jpg",
+      "/gogreen/CL2026_WebDesign-02.jpg",
     ],
   },
   {
@@ -104,8 +97,8 @@ const items: TabItem[] = [
     content:
       "Data-driven advertising campaigns across multiple platforms. We maximize your ad spend efficiency through continuous monitoring and optimization.",
     images: [
-      "production/DSC09180.png",
-      "production/DSC09193.png",
+      "production/DSC09201.jpeg",
+      "production/DSC09187.jpeg",
       "production/20250627-645A2711.jpg",
       "production/20250627-645A2599.jpg",
       "production/20250627-645A2650.jpg",
@@ -120,11 +113,15 @@ export default function ServiceTabs() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
-    <section
-      className="bg-black min-h-screen flex flex-col justify-start mt-500 "
-      id="portfolio"
-    >
-      <div className="text-[#03FF00] text-[55px]  font-medium py-40 flex flex-row items-center justify-center font-inter">
+    <section className="bg-black min-h-screen flex flex-col justify-start">
+      <video autoPlay muted loop className="w-full h-auto object-cover ">
+        <source src="/videos/เข็มไมล์.mp4" type="video/mp4" />
+      </video>
+
+      <div
+        className="text-[#03FF00] text-[55px]  font-medium pt-50 mt-50 flex flex-row items-center justify-center font-inter"
+        id="portfolio"
+      >
         PortFoilo
       </div>
       {/* Images Lightbox */}
@@ -308,7 +305,7 @@ function PixelTabRow({
   // Generate box-shadow string for the slope down (Right side)
   // Draws a stepped line from top-left to bottom-right
   const generateSlopeDownShadow = (color: string) => {
-    let shadows = [];
+    const shadows = [];
     for (let i = 0; i < steps; i++) {
       const x = i * stepWidth - pixelSize; // Start 0
       const y = i * pixelSize; // Move down
@@ -329,7 +326,8 @@ function PixelTabRow({
       <div
         className="mt-auto relative w-[5%] md:w-[var(--tab-indent)]"
         style={{
-          // @ts-ignore
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-expect-error
           "--tab-indent": `${item.indent}%`,
           height: pixelSize,
           backgroundColor: item.color,

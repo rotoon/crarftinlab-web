@@ -13,56 +13,49 @@ function Header() {
           <source src="/videos/Comp 3.mp4" type="video/mp4" />
         </video>
       </div>
-      <div
-        className="h-[800px z-50 bg-black relative"
-        // style={{
-        //   backgroundImage: 'url("/images/symbol CLweb2.png")',
-        //   backgroundPosition: "center",
-        //   backgroundSize: "cover",
-        //   backgroundRepeat: "no-repeat",
-        // }}
-      >
-        <section
-          className="bg-black  flex flex-col justify-start  "
-          id="about"
-        ></section>
 
+      <section
+        className="bg-black flex flex-col justify-start  relative h-vh-screen"
+        id="about"
+      >
+        <div className="w-full z-50 absolute ">
+          <motion.h1
+            initial={{ y: -200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-[56px] text-center mb-8 pt-20 text-white font-medium"
+          >
+            อัปเกรดธุรกิจของคุณด้วย
+            <br />
+            การเปลี่ยนแปลงทางดิจิทัล
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1 }}
+            className=" text-[24px] text-center text-white font-normal"
+          >
+            `เราช่วยพัฒนาธุรกิจและองค์กร ด้วยเทคโนโลยี`
+            <br />
+            สร้างระบบการจัดการที่มีประสิทธิภาพตอบสนอง
+            ต่อความต้องการของลูกค้าทุกรูปแบบ
+            <br /> พร้อมทั้งออกแบบเครื่องมือแก้ปัญหาทางการตลาด
+            ด้วยการสร้างสรรค์คอนเทนต์
+            <br />
+            บนช่องทางที่หลากหลาย ตอบทุกโจทย์กลุ่มเป้าหมาย
+            ขับเคลื่อนให้ธุรกิจและองค์กรของคุณ <br />
+            เติบโตบนโลกดิจิทัลได้อย่างไร้ขีดจำกัด
+          </motion.p>
+        </div>
         <Image
           src="/images/symbol CLweb2.png"
           alt="Crafting Lab Header"
           width={1920}
           height={128}
-          className="w-full h-auto absolute top-0 left-0 z-0"
+          className="w-full h-auto  top-0 left-0 -z-10-0"
         />
-        <motion.h1
-          initial={{ y: -200, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="text-[56px] text-center mb-8 pt-20 text-white font-medium"
-        >
-          อัปเกรดธุรกิจของคุณด้วย
-          <br />
-          การเปลี่ยนแปลงทางดิจิทัล
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
-          className=" text-[24px] text-center text-white font-normal"
-        >
-          `เราช่วยพัฒนาธุรกิจและองค์กร ด้วยเทคโนโลยี`
-          <br />
-          สร้างระบบการจัดการที่มีประสิทธิภาพตอบสนอง
-          ต่อความต้องการของลูกค้าทุกรูปแบบ
-          <br /> พร้อมทั้งออกแบบเครื่องมือแก้ปัญหาทางการตลาด
-          ด้วยการสร้างสรรค์คอนเทนต์
-          <br />
-          บนช่องทางที่หลากหลาย ตอบทุกโจทย์กลุ่มเป้าหมาย
-          ขับเคลื่อนให้ธุรกิจและองค์กรของคุณ <br />
-          เติบโตบนโลกดิจิทัลได้อย่างไร้ขีดจำกัด
-        </motion.p>
-      </div>
+      </section>
     </div>
   );
 }
